@@ -50,37 +50,7 @@
         children: roots.map(root => findChildren(root, children)),
       }
 
-        /* children.forEach(function(d) {
-        var leaf = seek(root, hierarchy(d), hierarchy()[0]);
-        if(leaf === false || !leaf) return;
-
-        if (!leaf.size) leaf.size = 0;
-        leaf.size += size() ? +size(d) : 1;
-
-        //console.log(leaf, color(), color(d))
-        leaf.color = color(d);
-        leaf.label = label(d);
-
-        delete leaf.children;
-      });
-      return root;
-      */
     })
-    /*
-    function seek(root, path, klass) {
-      if (path.length < 1) return false;
-      if (!root.children) root.children = [];
-      var p = root.children.filter(function (d){ return d.name == path[0]; })[0];
-
-      if (!p) {
-        if( /\S/.test(path[0]) ) {
-          p = { name: path[0], class:klass, children:[]};
-          root.children.push(p);
-        } else p = root;
-      }
-      return p;
-    }
-    */
 
     var chart = raw.chart()
         .title('Tree')
